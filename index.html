@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Starok — інтернет-магазин кріпильних виробів: болти, гайки, саморізи, такелаж, шайби, шпильки та шурупи з доставкою по Україні." />
+  <meta name="theme-color" content="#141414" />
+  <title>Starok — Інтернет-магазин кріпильних виробів</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="Starok — на головну">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3" />
+            <path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" />
+          </svg>
+        </span>
+        <span class="logo-text">Star<span>ok</span></span>
+      </a>
+
+      <div class="header-actions">
+        <div class="search-bar" role="search">
+          <input type="search" id="searchInput" placeholder="Пошук товарів…" aria-label="Пошук товарів" />
+          <button type="button" aria-label="Шукати">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+        </div>
+
+        <button class="cart-btn" id="cartBtn" aria-label="Відкрити кошик" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" />
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+          </svg>
+          <span>Кошик</span>
+          <span class="cart-badge" id="cartBadge" data-count="0" aria-live="polite">0</span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Відкрити меню" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav" id="siteNav" aria-label="Категорії товарів">
+    <ul class="nav-list">
+      <li><a href="#products" data-filter="all" class="active">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /></svg>
+        Всі товари
+      </a></li>
+      <li><a href="#products" data-filter="bolts">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 3-3 3-3-3 3-3z" /><path d="M12 8v14" /><path d="M8 12h8M8 16h8" /></svg>
+        Болти
+      </a></li>
+      <li><a href="#products" data-filter="nuts">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3" /></svg>
+        Гайки
+      </a></li>
+      <li><a href="#products" data-filter="self-tapping">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8" /><path d="M8 6h8" /><path d="M10 10l-2 12h8l-2-12" /></svg>
+        Саморізи
+      </a></li>
+      <li><a href="#products" data-filter="rigging">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6" /><circle cx="12" cy="12" r="4" /><path d="M12 16v6" /><path d="M8 22h8" /></svg>
+        Такелаж
+      </a></li>
+      <li><a href="#products" data-filter="washers">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /></svg>
+        Шайби
+      </a></li>
+      <li><a href="#products" data-filter="pins">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20" /><path d="M8 6h8M8 10h8M8 14h8M8 18h8" /></svg>
+        Шпильки
+      </a></li>
+      <li><a href="#products" data-filter="screws">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l-2 4h4l-2-4z" /><path d="M10 6v14l2 2 2-2V6" /></svg>
+        Шурупи
+      </a></li>
+    </ul>
+  </nav>
+
+  <span id="top"></span>
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero" aria-label="Головний банер">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-eyebrow">З 2014 року на ринку</span>
+        <h1>Надійний <em>кріпильний</em> матеріал для ваших проєктів</h1>
+        <p>Болти, гайки, шурупи, такелаж та шайби — професійний асортимент від виробника з доставкою по всій Україні.</p>
+        <div class="hero-cta">
+          <a href="#products" class="btn-primary">
+            Переглянути каталог
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </a>
+          <a href="tel:+380679025518" class="btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+            Зв'язатися
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual-bg"></div>
+        <div class="hero-visual-card hv-card-1">
+          <div class="hv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5" /></svg></div>
+          <div><div class="hv-title">5000+ товарів</div><div class="hv-sub">На складі в наявності</div></div>
+        </div>
+        <div class="hero-visual-card hv-card-2">
+          <div class="hv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg></div>
+          <div><div class="hv-title">Доставка 1–3 дні</div><div class="hv-sub">По всій Україні</div></div>
+        </div>
+        <div class="hero-visual-card hv-card-3">
+          <div class="hv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg></div>
+          <div><div class="hv-title">Гарантія якості</div><div class="hv-sub">Сертифіковані вироби</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== FEATURES BAR ============================== -->
+  <section class="features" aria-label="Переваги магазину">
+    <div class="features-inner">
+      <div class="feature">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg></div>
+        <div class="feature-text"><div class="feature-title">Швидка доставка</div><div class="feature-sub">Нова Пошта, Укрпошта</div></div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg></div>
+        <div class="feature-text"><div class="feature-title">Гарантія якості</div><div class="feature-sub">DIN, ГОСТ стандарти</div></div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg></div>
+        <div class="feature-text"><div class="feature-title">Опт і роздріб</div><div class="feature-sub">Гнучкі ціни</div></div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg></div>
+        <div class="feature-text"><div class="feature-title">Підтримка 24/7</div><div class="feature-sub">Telegram, Viber, телефон</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== PRODUCTS ============================== -->
+  <main class="products-section" id="products">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">Каталог продукції</span>
+        <h2 class="section-title">Наші <em>товари</em></h2>
+      </div>
+      <div class="products-toolbar">
+        <p class="products-count" id="productsCount">Завантаження…</p>
+        <select class="sort-select" id="sortSelect" aria-label="Сортування товарів">
+          <option value="default">За замовчуванням</option>
+          <option value="price-asc">Ціна: від дешевших</option>
+          <option value="price-desc">Ціна: від дорожчих</option>
+          <option value="name-asc">Назва: А → Я</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid" aria-live="polite" aria-label="Список товарів"></div>
+    <div class="pagination" id="paginationContainer"></div>
+  </main>
+
+  <!-- ============================== CART DRAWER ============================== -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Кошик" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Кошик <span class="cart-count-tag" id="cartItemCount"></span></h2>
+      <button class="close-cart-btn" id="closeCartBtn" aria-label="Закрити кошик">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItemsList" aria-live="polite"></div>
+    <div class="cart-footer" id="cartFooter" hidden>
+      <div class="cart-total-row">
+        <span class="cart-total-label">Разом до сплати:</span>
+        <span class="cart-total-val" id="cartTotal">0 ₴</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn">
+        Оформити замовлення
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+      </button>
+      <a href="#products" class="continue-shopping-btn" id="continueShoppingBtn">← Продовжити покупки</a>
+    </div>
+  </aside>
+
+  <!-- ============================== CHECKOUT MODAL ============================== -->
+  <div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Оформлення замовлення" aria-hidden="true">
+    <div class="modal" id="checkoutModalInner"></div>
+  </div>
+
+  <!-- ============================== TOASTS ============================== -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="site-footer" aria-label="Підвал сайту">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" />
+              </svg>
+            </span>
+            <span class="footer-logo-text">Star<span>ok</span></span>
+          </div>
+          <p class="footer-about">Надійний постачальник кріпильних виробів для будівництва, виробництва та приватних майстрів. Працюємо з 2014 року.</p>
+          <div class="social-links">
+            <a href="https://t.me/starok" target="_blank" rel="noopener" class="social-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" /></svg>
+              Telegram
+            </a>
+            <a href="viber://chat?number=380679025518" class="social-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.4 1.5C6.3 1.7 2.3 5.5 2 10.5c-.2 3.6 1.6 6.8 4.4 8.6v3.4s0 1 .6 1.2c.7.2 1.1-.4 1.8-1.1l1.9-2c.7.1 1.4.2 2.1.2 5.5-.2 9.7-4.3 9.4-9.5-.3-4.8-4.6-9.3-10.8-9.8z" /></svg>
+              Viber
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Контакти</h3>
+          <a href="tel:+380679025518">+38 (067) 902-55-18</a><br />
+          <a href="mailto:andreas.zartmet@gmail.com">andreas.zartmet@gmail.com</a>
+        </div>
+        <div class="footer-col">
+          <h3>Каталог</h3>
+          <a href="#products" data-filter="bolts">Болти</a><br />
+          <a href="#products" data-filter="nuts">Гайки</a><br />
+          <a href="#products" data-filter="self-tapping">Саморізи</a><br />
+          <a href="#products" data-filter="rigging">Такелаж</a><br />
+          <a href="#products" data-filter="washers">Шайби</a><br />
+          <a href="#products" data-filter="pins">Шпильки</a><br />
+          <a href="#products" data-filter="screws">Шурупи</a>
+        </div>
+        <div class="footer-col">
+          <h3>Інформація</h3>
+          <a href="#">Доставка і оплата</a><br />
+          <a href="#">Про компанію</a><br />
+          <a href="#">Оптовим клієнтам</a><br />
+          <a href="#">Контакти</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Starok. Всі права захищені.</p>
+        <p>Розроблено з ❤ в Україні</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
