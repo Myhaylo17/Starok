@@ -19,11 +19,9 @@
 /* ===================== 1. PRODUCT DATA ===================== */
 const PRODUCTS = [
   // ── Болти ──
-  // DIN603 = грибовидна (mushroom/carriage) head → bolt_grib.jpg
   { id: 1,  name: 'DIN603 Болт з грибовидною головкою М10х100, кл.4.8, оц', category: 'bolts', catLabel: 'Болти', price: 116.90, unit: 'кг',     emoji: '🔩', image: 'images/болт_гриб_гол.jpg' },
   { id: 2,  name: 'DIN603 Болт з грибовидною головкою М6х20, кл.4.8, оц',   category: 'bolts', catLabel: 'Болти', price: 123.90, unit: 'кг',     emoji: '🔩', image: 'images/болт_гриб_гол.jpg' },
   { id: 3,  name: 'DIN603 Болт з грибовидною головкою М8х100, кл.4.8, оц',  category: 'bolts', catLabel: 'Болти', price: 120.10, unit: 'кг',     emoji: '🔩', image: 'images/болт_гриб_гол.jpg' },
-  // DIN931/DIN933 = шестигранна (hex) head → bolt.jpg
   { id: 4,  name: 'DIN931 Болт з Шестигранною Головкою М10х40, кл.10.9, оксид', category: 'bolts', catLabel: 'Болти', price: 474.85, unit: '100 шт', emoji: '🔩', image: 'images/bolt.jpg' },
   { id: 5,  name: 'DIN931 Болт з Шестигранною Головкою М12х50, кл.10.9, оксид', category: 'bolts', catLabel: 'Болти', price: 795.79, unit: '100 шт', emoji: '🔩', image: 'images/bolt.jpg' },
   { id: 6,  name: 'DIN931 Болт з Шестигранною Головкою М16х60, кл.10.9, оксид', category: 'bolts', catLabel: 'Болти', price: 1736.59,unit: '100 шт', emoji: '🔩', image: 'images/bolt.jpg' },
@@ -32,7 +30,6 @@ const PRODUCTS = [
   { id: 9,  name: 'DIN933 Болт з Шестигранною Головкою М8х20, кл.5.8, оц',   category: 'bolts', catLabel: 'Болти', price: 109.80, unit: 'кг',     emoji: '🔩', image: 'images/bolt.jpg' },
 
   // ── Гайки ──
-  // bolt_hex.jpg is actually two hex nuts; nut.jpg is single large nut (кл.10.9)
   { id: 10, name: 'Гайка 10 (1 кг=99 шт)',  category: 'nuts', catLabel: 'Гайки', price: 107.65, unit: 'кг', emoji: '🔩', image: 'images/nut_975_10.9.jpg' },
   { id: 11, name: 'Гайка 12 (1 кг=60 шт)',  category: 'nuts', catLabel: 'Гайки', price: 107.65, unit: 'кг', emoji: '🔩', image: 'images/nut_975_10.9.jpg' },
   { id: 12, name: 'Гайка 16 (1 кг=34шт)',   category: 'nuts', catLabel: 'Гайки', price: 107.65, unit: 'кг', emoji: '🔩', image: 'images/nut_975_10.9.jpg' },
@@ -41,67 +38,47 @@ const PRODUCTS = [
   { id: 15, name: 'Гайка 24, кл.10,9',      category: 'nuts', catLabel: 'Гайки', price: 126.11, unit: 'кг', emoji: '🔩', image: 'images/nut_975_10.9.jpg' },
 
   // ── Саморізи ──
-  // id 16: DIN7981C — н/кругла головка (pan/round head sharp tip) → samoriz_gostr.jpg
   { id: 16, name: 'Самонаріз з н/кругл гол. DIN7981C 3,5х6,5 оц.',   category: 'self-tapping', catLabel: 'Саморізи', price: 20.95,  unit: '100 шт', emoji: '🔨', image: 'images/samoriz_gostr.jpg' },
-  // id 17–18: з пресшайбою (with press washer, drill tip) → samoriz_z_bur.jpg
   { id: 17, name: 'Самонаріз з пресшайбою 4,2х13 (1уп=1000 шт)',      category: 'self-tapping', catLabel: 'Саморізи', price: 38.30,  unit: '100 шт', emoji: '🔨', image: 'images/samoriz_z_bur.jpg' },
   { id: 18, name: 'Самонаріз з пресшайбою 4,2х16 бур (1уп=1000 шт)', category: 'self-tapping', catLabel: 'Саморізи', price: 40.44,  unit: '100 шт', emoji: '🔨', image: 'images/samoriz_z_bur.jpg' },
-  // id 19: "тех" (білі) — tech drywall type → samoriz_gk.jpg (black drywall screw)
   { id: 19, name: 'Самонаріз "тех" (білі) 3,5х9,5 (1уп=1000 шт) О',  category: 'self-tapping', catLabel: 'Саморізи', price: 21.97,  unit: '100 шт', emoji: '🔨', image: 'images/саморіз_гк.jpg' },
-  // id 20: 3,5х25 дерево — wood self-tapper → samoriz_pres.jpg (pan head sharp)
   { id: 20, name: 'Самонаріз 3,5х25 (дерево) (1уп=1000 шт) О',       category: 'self-tapping', catLabel: 'Саморізи', price: 21.53,  unit: '100 шт', emoji: '🔨', image: 'images/samoriz.jpg' },
-  // id 21: 3,5х35 метал — metal self-tapper → samoriz_z_bur.jpg (drill bit tip for metal)
   { id: 21, name: 'Самонаріз 3,5х35 (метал) (1уп=1000 шт) О',        category: 'self-tapping', catLabel: 'Саморізи', price: 30.77,  unit: '100 шт', emoji: '🔨', image: 'images/samoriz.jpg' },
-  // id 22–23: дерево longer → samoriz_pres.jpg
   { id: 22, name: 'Самонаріз 4,2х70 (дерево) (1уп=250 шт) О',        category: 'self-tapping', catLabel: 'Саморізи', price: 70.90,  unit: '100 шт', emoji: '🔨', image: 'images/samoriz.jpg' },
   { id: 23, name: 'Самонаріз 4,8х100 (дерево) (1уп=250 шт) О',       category: 'self-tapping', catLabel: 'Саморізи', price: 175.48, unit: '100 шт', emoji: '🔨', image: 'images/samoriz.jpg' },
 
   // ── Такелаж ──
-  // Тарлеп (turnbuckle) → tarlep.jpg
   { id: 24, name: 'DIN1480 Тарлеп кований гак-око М10', category: 'rigging', catLabel: 'Такелаж', price: 50.95,  unit: 'шт', emoji: '⚓', image: 'images/tarlep.jpg' },
   { id: 25, name: 'DIN1480 Тарлеп кований гак-око М12', category: 'rigging', catLabel: 'Такелаж', price: 74.15,  unit: 'шт', emoji: '⚓', image: 'images/tarlep.jpg' },
-  // Карабін U (D-shackle) → carabin_UM22.png
   { id: 26, name: 'Карабін U М22',                       category: 'rigging', catLabel: 'Такелаж', price: 149.60, unit: 'шт', emoji: '⚓', image: 'images/carabin_UM22.png' },
-  // Карабін пожарний без фіксатора → carabin_without_fix.jpg
   { id: 27, name: 'Карабін пож. без фіксатора 8х80',     category: 'rigging', catLabel: 'Такелаж', price: 13.33,  unit: 'шт', emoji: '⚓', image: 'images/carabin_without_fix.jpg' },
-  // Карабін пожарний з фіксатором — same spring-type, best available image
   { id: 28, name: 'Карабін пож. з фіксатором 10х100',    category: 'rigging', catLabel: 'Такелаж', price: 25.47,  unit: 'шт', emoji: '⚓', image: 'images/carabin_without_fix.jpg' },
-  // Ланцюг (chain) → lancug.jpg
   { id: 29, name: 'Ланцюг госп. оц 4мм/84м',             category: 'rigging', catLabel: 'Такелаж', price: 30.99,  unit: 'м',  emoji: '⚓', image: 'images/lancug.jpg' },
   { id: 30, name: 'Ланцюг госп. оц 8мм/20м',             category: 'rigging', catLabel: 'Такелаж', price: 126.42, unit: 'м',  emoji: '⚓', image: 'images/lancug.jpg' },
 
   // ── Шайби ──
-  // All washers share shayba.jpg (enlarged flat washer DIN9021)
   { id: 31, name: 'Шайба збільш DIN 9021 6 (1кг=416шт)',  category: 'washers', catLabel: 'Шайби', price: 99.50, unit: 'кг', emoji: '💿', image: 'images/shayba.jpg' },
   { id: 32, name: 'Шайба збільш DIN 9021 8 (1кг=177 шт)', category: 'washers', catLabel: 'Шайби', price: 91.50, unit: 'кг', emoji: '💿', image: 'images/shayba.jpg' },
   { id: 33, name: 'Шайба збільш DIN 9021 10 (1кг=92шт)',  category: 'washers', catLabel: 'Шайби', price: 91.50, unit: 'кг', emoji: '💿', image: 'images/shayba.jpg' },
   { id: 34, name: 'Шайба збільш DIN 9021 12 (1кг=48шт)',  category: 'washers', catLabel: 'Шайби', price: 91.50, unit: 'кг', emoji: '💿', image: 'images/shayba.jpg' },
 
   // ── Шпильки ──
-  // DIN975 кл.10.9 → dark oxide rod → pin_10_9.jpg
   { id: 35, name: 'DIN 975 Шпилька різьбова 14х1000 кл.10,9', category: 'pins', catLabel: 'Шпильки', price: 107.79, unit: 'шт', emoji: '📏', image: 'images/pin_975_10,9.jpg' },
   { id: 36, name: 'DIN 975 Шпилька різьбова 20х1000 кл.10,9', category: 'pins', catLabel: 'Шпильки', price: 233.21, unit: 'шт', emoji: '📏', image: 'images/pin_975_10,9.jpg' },
-  // DIN975 кл.4.8 → bright zinc rod → pin_4_8.jpg
   { id: 37, name: 'DIN 975 Шпилька різьбова 30х1000 кл.4,8',  category: 'pins', catLabel: 'Шпильки', price: 334.34, unit: 'шт', emoji: '📏', image: 'images/pin_975_4,8.jpg' },
-  // DIN976 → galvanized stud → shpylka976.jpg
   { id: 38, name: 'DIN 976 Шпилька різьбова 10х1000',         category: 'pins', catLabel: 'Шпильки', price: 31.82,  unit: 'шт', emoji: '📏', image: 'images/шпилька976.jpg' },
   { id: 39, name: 'DIN 976 Шпилька різьбова 12х2000',         category: 'pins', catLabel: 'Шпильки', price: 93.40,  unit: 'шт', emoji: '📏', image: 'images/шпилька976.jpg' },
   { id: 40, name: 'DIN 976 Шпилька різьбова 16х1000',         category: 'pins', catLabel: 'Шпильки', price: 112.89, unit: 'шт', emoji: '📏', image: 'images/шпилька976.jpg' },
 
   // ── Шурупи ──
-  // з шестигранною головкою (hex head wood/lag screw) → shurup_6.jpg
   { id: 41, name: 'Шуруп з шестигран./голов. 10х100 (10 кг=188 шт)', category: 'screws', catLabel: 'Шурупи', price: 539.71, unit: '100 шт', emoji: '🪛', image: 'images/shurup_6.jpg' },
   { id: 42, name: 'Шуруп з шестигран./голов. 8х100 (10 кг=316 шт)',  category: 'screws', catLabel: 'Шурупи', price: 321.09, unit: '100 шт', emoji: '🪛', image: 'images/shurup_6.jpg' },
-  // до дерева TORX з гол/потай (countersunk TORX for wood) → shurup_torx.jpg
   { id: 43, name: 'Шуруп до дерева TORX з гол/потай 3,5х35 ж/ц',    category: 'screws', catLabel: 'Шурупи', price: 32.23,  unit: '100 шт', emoji: '🪛', image: 'images/shurup_tree_TORX.jpg' },
   { id: 44, name: 'Шуруп до дерева TORX з гол/потай 4,0х40 ж/ц',    category: 'screws', catLabel: 'Шурупи', price: 47.95,  unit: '100 шт', emoji: '🪛', image: 'images/shurup_tree_TORX.jpg' },
-  // теслярський з гол/потай (carpenter countersunk) → shurup_tesl_hide.jpg
   { id: 45, name: 'Шуруп теслярський з гол/потай 6х100/50 ж/ц',     category: 'screws', catLabel: 'Шурупи', price: 267.74, unit: '100 шт', emoji: '🪛', image: 'images/shurup_tesl_disk_WCT.jpg' },
   { id: 46, name: 'Шуруп теслярський з гол/потай 8х140/80 ж/ц',     category: 'screws', catLabel: 'Шурупи', price: 619.65, unit: '100 шт', emoji: '🪛', image: 'images/shurup_tesl_disk_WCT.jpg' },
-  // теслярський з диск/гол (carpenter pan/disk head, gold) → shurup_tesl_disk.jpg
   { id: 47, name: 'Шуруп теслярський з диск/гол 6х100/50 ж/ц',      category: 'screws', catLabel: 'Шурупи', price: 254.93, unit: '100 шт', emoji: '🪛', image: 'images/шуруп_універсальнйи.jpg' },
   { id: 48, name: 'Шуруп теслярський з диск/гол 8х120/80 ж/ц',      category: 'screws', catLabel: 'Шурупи', price: 582.17, unit: '100 шт', emoji: '🪛', image: 'images/шуруп_універсальнйи.jpg' },
-  // універсальний (universal yellow-zinc) → shurup_univ.jpg
   { id: 49, name: 'Шуруп універсальний 3,0х16 (1уп=1000 шт)',        category: 'screws', catLabel: 'Шурупи', price: 15.07,  unit: '100 шт', emoji: '🪛', image: 'images/шуруп_універсальнйи.jpg' },
   { id: 50, name: 'Шуруп універсальний 4,0х20 (1уп=1000 шт)',        category: 'screws', catLabel: 'Шурупи', price: 25.32,  unit: '100 шт', emoji: '🪛', image: 'images/шуруп_універсальнйи.jpg' },
   { id: 51, name: 'Шуруп універсальний 5,0х50 (1уп=250 шт)',         category: 'screws', catLabel: 'Шурупи', price: 75.96,  unit: '100 шт', emoji: '🪛', image: 'images/шуруп_універсальнйи.jpg' },
@@ -641,14 +618,13 @@ function setFilter(filter) {
   document.querySelectorAll('[data-filter]').forEach(a =>
     a.classList.toggle('active', a.dataset.filter === filter)
   );
-  // Collapse mobile nav after choosing a category
+  // Ховаємо мобільне меню після вибору категорії
   document.getElementById('siteNav').classList.remove('mobile-open');
   const menuBtn = document.getElementById('mobileMenuBtn');
   menuBtn.setAttribute('aria-expanded', 'false');
   menuBtn.textContent = '☰';
 
   renderProducts();
-  document.getElementById('products').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /* ===================== 12. INIT / EVENT WIRING ===================== */
